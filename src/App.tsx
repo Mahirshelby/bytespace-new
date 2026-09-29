@@ -2,6 +2,7 @@ import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import LogoStrip from './components/sections/LogoStrip'
 import Discover from './components/sections/Discover'
+import CourseGrid from './components/sections/CourseGrid'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <LogoStrip />
         <Discover />
+        <CourseGrid />
       </main>
     </>
   )
