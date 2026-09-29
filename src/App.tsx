@@ -5,6 +5,9 @@ import Discover from './components/sections/Discover'
 import CourseGrid from './components/sections/CourseGrid'
 import ExploreCategories from './components/sections/ExploreCategories'
 import GrowthPath from './components/sections/GrowthPath'
+import CreatorFeatures from './components/sections/CreatorFeatures'
+import CreatorCTA from './components/sections/CreatorCTA'
+import Testimonials from './components/sections/Testimonials'
 
 export default function App() {
   return (
@@ -17,6 +20,9 @@ export default function App() {
         <CourseGrid />
         <ExploreCategories />
         <GrowthPath />
+        <CreatorFeatures />
+        <CreatorCTA />
+        <Testimonials />
       </main>
     </>
   )
