@@ -31,30 +31,11 @@ export default function GrowthPath() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[400px] w-full max-w-[460px]">
-          <div className="absolute left-0 top-0 w-64 rounded-2xl border border-gray-200 bg-white p-2.5 shadow-sm">
-            <img src="/images/course-1.png" alt="" className="h-36 w-full rounded-xl bg-gray-200 object-cover" />
-            <p className="mt-3 px-1 text-xs font-semibold">Learn Figma from Basic</p>
-            <p className="px-1 text-[9px] text-gray-500">
-              by <span className="text-primary">purepearl studio</span>
-            </p>
-            <p className="mt-2 px-1 text-xs font-semibold text-primary">$25</p>
-          </div>
-
-          <img
-            src="/images/growth-person.png"
-            alt="Student smiling with laptop"
-            className="absolute bottom-0 right-0 h-[360px] object-contain"
-          />
-
-          <div className="absolute right-0 top-24 w-36 rounded-xl bg-white p-3 shadow">
-            <p className="text-[10px] text-gray-500">Learning Progress</p>
-            <p className="text-2xl font-semibold">55%</p>
-            <div className="mt-1 h-1.5 w-full rounded-full bg-gray-200">
-              <div className="h-full w-[55%] rounded-full bg-lime" />
-            </div>
-          </div>
-        </div>
+        <img
+          src="/images/growth-visual.png"
+          alt="Student with a laptop, a course card and a learning progress card"
+          className="mx-auto w-full max-w-[520px]"
+        />
       </Container>
     </section>
   )
