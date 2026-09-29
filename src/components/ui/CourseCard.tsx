@@ -20,7 +20,7 @@ export default function CourseCard({ course }: { course: Course }) {
 
       <div className="px-1.5 pb-1 pt-3">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="text-sm font-semibold leading-tight">{course.title}</h3>
+          <h3 className="min-w-0 truncate text-sm font-semibold leading-tight">{course.title}</h3>
           <span className="shrink-0 text-xs text-gray-500">
             {course.rating} <span className="text-gray-300">★</span>
           </span>
