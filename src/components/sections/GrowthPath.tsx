@@ -8,7 +8,7 @@ const stats = [
 
 export default function GrowthPath() {
   return (
-    <section className="bg-gradient-to-br from-lime/40 via-white to-indigo-50 py-20">
+    <section className="py-20">
       <Container className="grid max-w-[1100px] items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
@@ -32,8 +32,8 @@ export default function GrowthPath() {
         </div>
 
         <div className="relative mx-auto h-[400px] w-full max-w-[460px]">
-          <div className="absolute left-0 top-0 w-56 rounded-2xl border border-gray-200 bg-white p-2.5 shadow-sm">
-            <img src="/images/course-1.png" alt="" className="h-28 w-full rounded-xl bg-gray-200 object-cover" />
+          <div className="absolute left-0 top-0 w-64 rounded-2xl border border-gray-200 bg-white p-2.5 shadow-sm">
+            <img src="/images/course-1.png" alt="" className="h-36 w-full rounded-xl bg-gray-200 object-cover" />
             <p className="mt-3 px-1 text-xs font-semibold">Learn Figma from Basic</p>
             <p className="px-1 text-[9px] text-gray-500">
               by <span className="text-primary">purepearl studio</span>

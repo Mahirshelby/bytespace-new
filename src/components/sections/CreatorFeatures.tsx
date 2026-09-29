@@ -1,6 +1,6 @@
 import Container from '../ui/Container'
 
-const points = ['Share Your Expertise', 'Monetize Your Passion', 'Flexibility and Autonomy']
+const points = ['Share Your Expertise', 'Monetize Your Passion', 'Flexibility and Autonomy', 'Build a Community']
 
 function CheckIcon() {
   return (
@@ -14,7 +14,7 @@ function CheckIcon() {
 
 export default function CreatorFeatures() {
   return (
-    <section className="bg-gradient-to-br from-indigo-50 via-white to-lime/30 py-20">
+    <section className="py-20">
       <Container className="grid max-w-[1100px] items-center gap-12 lg:grid-cols-2">
         <div className="relative mx-auto h-[440px] w-full max-w-[420px]">
           <img

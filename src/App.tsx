@@ -20,8 +20,10 @@ export default function App() {
         <Discover />
         <CourseGrid />
         <ExploreCategories />
-        <GrowthPath />
-        <CreatorFeatures />
+        <div className="bg-soft">
+          <GrowthPath />
+          <CreatorFeatures />
+        </div>
         <CreatorCTA />
         <Testimonials />
       </main>
