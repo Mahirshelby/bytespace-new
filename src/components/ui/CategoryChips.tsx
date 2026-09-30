@@ -17,7 +17,7 @@ export default function CategoryChips() {
             <button
               key={c}
               onClick={() => setActive(c)}
-              className={`flex h-[43px] cursor-pointer items-center rounded-full px-[18px] text-sm transition ${
+              className={`flex h-[43px] cursor-pointer items-center rounded-full px-[18px] text-label-s transition ${
                 active === c
                   ? 'bg-lime text-[#242528]'
                   : 'bg-[#F5F5F6] text-[#4B4C53] hover:bg-gray-200'
@@ -27,7 +27,7 @@ export default function CategoryChips() {
             </button>
           ))}
           {i === rows.length - 1 && (
-            <button className="flex h-[43px] cursor-pointer items-center px-1 text-sm font-medium text-[#003AE1]">
+            <button className="flex h-[43px] cursor-pointer items-center px-1 text-label-s font-medium text-[#003AE1]">
               + More
             </button>
           )}
