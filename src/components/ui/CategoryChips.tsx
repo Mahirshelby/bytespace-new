@@ -10,22 +10,26 @@ export default function CategoryChips() {
   const [active, setActive] = useState('Featured')
 
   return (
-    <div className="mx-auto mt-8 flex max-w-4xl flex-col items-center gap-3">
+    <div className="mx-auto mt-12 flex max-w-[1100px] flex-col items-center gap-5">
       {rows.map((row, i) => (
-        <div key={i} className="flex flex-wrap justify-center gap-3">
+        <div key={i} className="flex flex-wrap justify-center gap-4">
           {row.map((c) => (
             <button
               key={c}
               onClick={() => setActive(c)}
-              className={`cursor-pointer rounded-full px-4 py-1.5 text-[11px] transition ${
-                active === c ? 'bg-lime font-medium text-ink' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              className={`flex h-[43px] cursor-pointer items-center rounded-full px-[18px] text-sm transition ${
+                active === c
+                  ? 'bg-lime text-[#242528]'
+                  : 'bg-[#F5F5F6] text-[#4B4C53] hover:bg-gray-200'
               }`}
             >
               {c}
             </button>
           ))}
           {i === rows.length - 1 && (
-            <button className="cursor-pointer px-2 py-1.5 text-[11px] font-medium text-primary">+ More</button>
+            <button className="flex h-[43px] cursor-pointer items-center px-1 text-sm font-medium text-[#003AE1]">
+              + More
+            </button>
           )}
         </div>
       ))}
