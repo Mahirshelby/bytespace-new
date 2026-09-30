@@ -1,56 +1,40 @@
 import type { Course } from '../../data/courses'
 
-const avatarColors = ['bg-amber-700', 'bg-rose-400', 'bg-yellow-500', 'bg-slate-700']
+// Card photos, badges and avatars are cut from one exported sheet (Frame 8) with CSS
+const SHEET = '/images/frame-8.png'
+const photos = [[16, 16], [429, 16], [842, 16], [16, 440], [429, 440], [842, 440]]
 
 export default function CourseCard({ course }: { course: Course }) {
-  const badges = [`${course.lessons} Lessons`, course.duration, `${course.comments} Comments`]
-
+  const [x, y] = photos[(course.id - 1) % photos.length]
   return (
-    <article className="rounded-2xl border border-gray-200 bg-white p-2.5">
-      <div className="relative h-40 overflow-hidden rounded-xl bg-gray-200">
-        <img src={course.image} alt="" className="h-full w-full object-cover" />
-        <div className="absolute inset-x-2 bottom-2 flex flex-wrap gap-1.5">
-          {badges.map((b) => (
-            <span key={b} className="rounded-full bg-gray-500/50 px-2 py-0.5 text-[9px] text-white">
-              {b}
-            </span>
-          ))}
-        </div>
+    <article className="rounded-[20px] border border-[#D5D6DB] bg-white p-4">
+      <div
+        role="img"
+        aria-label={course.title}
+        className="aspect-[341/195] w-full rounded-2xl bg-gray-200"
+        style={{
+          backgroundImage: `url(${SHEET})`,
+          backgroundSize: `${(1199 / 341) * 100}% auto`,
+          backgroundPosition: `${(x / 858) * 100}% ${(y / 613) * 100}%`,
+        }}
+      />
+      <div className="mt-4 flex items-start justify-between gap-2">
+        <h3 className="min-w-0 truncate text-heading-xs">{course.title}</h3>
+        <span className="shrink-0 text-label-m text-[#4B4C53]">{course.rating} <span className="text-gray-300">★</span></span>
       </div>
-
-      <div className="px-1.5 pb-1 pt-3">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="min-w-0 truncate text-sm font-semibold leading-tight">{course.title}</h3>
-          <span className="shrink-0 text-xs text-gray-500">
-            {course.rating} <span className="text-gray-300">★</span>
-          </span>
-        </div>
-        <p className="mt-0.5 text-[9px] text-gray-500">
-          by <span className="text-primary">{course.author}</span>
-        </p>
-
-        <div className="mt-3 flex items-center gap-3">
-          <span className="flex items-center gap-1.5 rounded-full bg-gray-100 px-2.5 py-1 text-[10px] text-gray-600">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-              <rect x="0" y="6" width="2" height="4" /><rect x="4" y="3" width="2" height="7" /><rect x="8" y="0" width="2" height="10" />
-            </svg>
-            {course.level}
-          </span>
-          <div className="flex items-center">
-            {avatarColors.map((c, i) => (
-              <span key={i} className={`-ml-1.5 h-5 w-5 rounded-full border-2 border-white first:ml-0 ${c}`} />
-            ))}
-            <span className="-ml-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-white bg-lime px-1 text-[8px] font-medium">
-              26+
-            </span>
-          </div>
-        </div>
-
-        <p className="mt-3 text-sm font-semibold text-primary">
-          ${course.price}
-          <span className="text-[9px] font-normal text-gray-500">/lifetime</span>
-        </p>
+      <p className="text-body-xs text-primary">by {course.author}</p>
+      <div className="mt-4 flex items-center gap-3">
+        <span className="flex h-[33px] items-center gap-2 rounded-full bg-[#F5F5F6] px-4 text-label-s font-medium text-[#4B4C53]">
+          <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor"><rect y="6" width="2" height="4" /><rect x="4" y="3" width="2" height="7" /><rect x="8" width="2" height="10" /></svg>
+          {course.level}
+        </span>
+        <span
+          aria-hidden
+          className="block h-9 w-[132px]"
+          style={{ backgroundImage: `url(${SHEET})`, backgroundSize: '1199px auto', backgroundPosition: '-124px -290px' }}
+        />
       </div>
+      <p className="mt-4 text-heading-xs text-primary">${course.price}<span className="font-sans text-label-s font-normal text-[#4B4C53]">/lifetime</span></p>
     </article>
   )
 }
