@@ -34,7 +34,7 @@ export default function CourseDetail() {
             <img src="/images/course-video.png" alt="Course preview" className="aspect-[681/454] w-full object-cover" />
             <button aria-label="Play" className="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 cursor-pointer place-items-center rounded-2xl bg-black/40 text-white">&#9654;</button>
           </div>
-          <aside className="rounded-3xl border border-[#D5D6DB] bg-white p-8 text-ink lg:-mb-[420px] lg:mb-0">
+          <aside className="rounded-3xl border border-[#D5D6DB] relative z-10 bg-white p-8 text-ink lg:-mb-[420px]">
             <h2 className="text-heading-xs">112 Lessons (24 hours)</h2>
             <ul className="mt-4 space-y-3 text-body-s">
               {lessonsPreview.map(([n, t, m]) => <li key={n} className="flex gap-3"><span>{n}</span><span className="flex-1">{t}</span><span className="text-[#003AE1]">{m}</span></li>)}
