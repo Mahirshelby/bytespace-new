@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Container from '../ui/Container'
 
 const links = ['Home', 'Courses', 'Creators']
@@ -20,8 +21,8 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-5 text-xs text-white">
-          <a href="#" className="opacity-80 hover:opacity-100">Sign In</a>
-          <a href="#" className="opacity-80 hover:opacity-100">Join Us</a>
+          <Link to="/login" className="opacity-80 hover:opacity-100">Sign In</Link>
+          <Link to="/register" className="opacity-80 hover:opacity-100">Join Us</Link>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M6 7h12l-1 13H7L6 7Z" /><path d="M9 7a3 3 0 0 1 6 0" />
           </svg>
